@@ -1,0 +1,12 @@
+<%= form_for [@restaurant, @restaurant.reviews.build] do |f| %>
+ 
+
+	<p> <%= f.label :评论内容 %>
+	<%= f.text_field :content %>
+	</p>
+
+	<p><%= f.label :评分 %>
+	<%= f.text_field :rating %>
+	</p>
+	<%= f.submit '提交' %>
+	<% end %>

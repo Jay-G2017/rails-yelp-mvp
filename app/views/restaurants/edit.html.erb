@@ -1,0 +1,18 @@
+<h1>修改餐厅信息</h1>
+<br>
+
+<% if @restaurant.errors.any? %>
+<div id="error_explaination">
+	<strong>修改失败！以下是错误信息：</strong>
+	<ul>
+		<% @restaurant.errors.full_messages.each do |m| %>
+		<li><%= m %></li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+
+<%= render 'partial' %>
+
+<br>
+<strong> <%= link_to "back", restaurants_path %></strong>

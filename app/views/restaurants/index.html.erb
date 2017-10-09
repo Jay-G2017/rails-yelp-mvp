@@ -1,0 +1,10 @@
+<h1>餐厅列表</h1>
+<strong><%= link_to '创建一个新餐厅', new_restaurant_path %></strong>
+<br>
+<% @restaurants.each do |r| %>
+<strong><%= r.name %></strong>
+<p><%= r.address %></p>
+<p><%= r.category %></p>
+<p><%= link_to "more details", r, class: 'btn btn-primary' %></p>
+<br>
+<% end %>

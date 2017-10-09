@@ -1,0 +1,15 @@
+<h1><%= @restaurant.name %></h1>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.category %></p>
+<strong><%= link_to 'back', restaurants_path %></strong>
+<strong><%= link_to 'edit', edit_restaurant_path %></strong>
+<strong><%= link_to 'delete', restaurant_path, method: 'delete' %></strong>
+
+<h4>评论区：</h4>
+<%= render @restaurant.reviews %>
+
+<br>
+<br>
+<h4>写一条评论吧！</h4>
+
+<%= render 'reviews/form' %>
